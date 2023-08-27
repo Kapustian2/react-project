@@ -1,6 +1,6 @@
 import { Routes, Route } from "react-router-dom";
 import { styled } from "styled-components";
-import { Header } from './components/index'
+import { Header, Footer } from './components/index'
 
 const AppColumn = styled.div`
   display: flex;
@@ -22,10 +22,6 @@ const H2 = styled.h2`
 
 
 
-const Fouter = () => <div>Футер</div>;
-
-
-
 function App() {
   return (
     <AppColumn>
@@ -43,7 +39,7 @@ function App() {
           <Route path="*" element={<div>Ошибка</div>} />
         </Routes>
       </Content>
-      <Fouter />
+      <Footer />
     </AppColumn>
   );
 }
