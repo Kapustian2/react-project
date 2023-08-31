@@ -1,35 +1,58 @@
 import { Link, useNavigate } from "react-router-dom";
-import { Icon } from "../../../../components";
+import { useSelector, useDispatch } from "react-redux";
+import { Button ,Icon } from "../../../../components";
 import { styled } from "styled-components";
+import { SelectUserLogin, selectUserSession, SelectUserRole } from "../../../../selectors";
+import { ROLE } from "../../../../constants/role";
+import { logout } from '../../../../actions/logout'
 
 const RightAlign = styled.div`
   display: flex;
   justify-content: flex-end;
+  align-items: center;
 `;
 
-const StyledLink = styled(Link)`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  font-size: 18px;
-  width: 100px;
-  height: 32px;
-  border: 1px solid black;
-  background-color: #b3b3b3;
-`;
+const StyledIcon = styled.div`
+&: hover {
+  cursor: pointer
+}
+`
+
+
+const UserName = styled.div`
+font-size: 18px;
+font-weight: bold;
+padding: 5px;
+`
 
 const ControlPanelContainer = ({ className }) => {
+  const dispatch = useDispatch()
   const navigate = useNavigate();
+  const roleId = useSelector(SelectUserRole)
+  const login = useSelector(SelectUserLogin)
+  const session = useSelector(selectUserSession)
+
   return (
     <div className={className}>
       <RightAlign>
-        <StyledLink to="/login">Войти</StyledLink>
+        
+        {roleId ===  ROLE.GUEST ? (
+          <Button>
+        <Link to="/login">Войти</Link> 
+        </Button>
+        ) : (
+        <>
+        <UserName>{login}</UserName> 
+        <StyledIcon>
+          <Icon id="fa-sign-out" size="23px" margin="" onClick={() => dispatch(logout(session))}/>
+          </StyledIcon>
+        </>
+        )}
       </RightAlign>
       <RightAlign>
-        <div onClick={() => navigate(-1)}>
+        <StyledIcon onClick={() => navigate(-1)}>
           <Icon id="fa-backward" size="23px" margin="" />
-        </div>
+        </StyledIcon>
         <Link to="/post">
           <Icon id="fa-pencil-square" size="23px" margin="" />
         </Link>

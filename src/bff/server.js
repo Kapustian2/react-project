@@ -1,5 +1,5 @@
 import { getUsers } from "./get-users";
-import { createSession } from "./session/create-session";
+import { sessions } from "./sessions";
 
 const generateDate = () =>
   new Date(Math.random() * 1000000000000 + 1999999999999)
@@ -8,6 +8,11 @@ const generateDate = () =>
     .replace("T", " ");
 
 export const server = {
+
+  async logout(session) {
+    sessions.remove(session);
+  },
+
   async authorize(authLogin, authPassword) {
     const users = await getUsers();
 
@@ -29,7 +34,12 @@ export const server = {
 
     return {
       error: null,
-      response: createSession(user.role_id)
+      response: {
+        id: user.id,
+        login: user.login,
+        roleId: user.role_id,
+        session: sessions.create(user)
+      }
     }
 
   },
@@ -64,7 +74,10 @@ export const server = {
 
     return {
       error: null,
-      response: createSession(user.role_id),
-    };
-  },
-};
+      response: {
+        id: user.id,
+        login: user.login,
+        roleId: user.role_id,
+        session: sessions.create(user)
+      }
+  }}}
