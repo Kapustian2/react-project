@@ -1,10 +1,8 @@
-const initialPostState = {
-
-}
+const initialPostState = {};
 
 export const postReducer = (state = initialPostState, action) => {
-    switch (action.type) {
-        default:
-            return state
-    }
-}
+	switch (action.type) {
+		default:
+			return state;
+	}
+};

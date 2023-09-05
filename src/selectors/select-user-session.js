@@ -1,2 +1,1 @@
-export const selectUserSession = ({user}) => 
-    user.session
+export const selectUserSession = ({ user }) => user.session;

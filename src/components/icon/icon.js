@@ -1,11 +1,11 @@
-import { styled } from "styled-components";
+import { styled } from 'styled-components';
 
 const IconContainer = ({ className, id, ...props }) => (
-  <div className={className} {...props}>
-    <i className={`fa ${id}`} aria-hidden="true"></i>
-  </div>
+	<div className={className} {...props}>
+		<i className={`fa ${id}`} aria-hidden="true"></i>
+	</div>
 );
 export const Icon = styled(IconContainer)`
-  font-size: ${({ size="20px" }) => size}};
-  margin: ${({ margin ="0" }) => margin}};
+  font-size: ${({ size = '20px' }) => size}};
+  margin: ${({ margin = '0' }) => margin}};
 `;
