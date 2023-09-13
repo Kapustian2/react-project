@@ -14,11 +14,11 @@ export const addUser = (login, password) =>
 			login,
 			password,
 			registed_at: generateDate(),
-			role_id: '2',
+			role_id: '1',
 		}),
 	}).then((response) => {
 		if (!response.ok) {
-			throw new Error('Network response was not ok');
+			throw new Error('Ошибка запроса');
 		}
 		return response.json();
 	});

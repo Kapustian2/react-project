@@ -5,22 +5,14 @@
       "login": "nekit",
       "password": "123456",
       "registed_at": "2023-08-23",
-      "role_id": "777",
-      "city": "Omsk"
+      "role_id": "777"
     },
     {
       "login": "nekita",
       "password": "nekita",
       "registed_at": "2064-02-26 08:08",
-      "role_id": "2",
+      "role_id": 2,
       "id": "kkvYHxa"
-    },
-    {
-      "login": "nekit2",
-      "password": "2tJ111",
-      "registed_at": "2047-04-24 20:56",
-      "role_id": "2",
-      "id": "BAGo1zt"
     }
   ],
   "roles": [
