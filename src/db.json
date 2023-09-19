@@ -11,7 +11,7 @@
       "login": "nekita",
       "password": "nekita",
       "registed_at": "2064-02-26 08:08",
-      "role_id": 2,
+      "role_id": 1,
       "id": "kkvYHxa"
     }
   ],
@@ -63,5 +63,126 @@
       "published_at": "2023-08-23"
     }
   ],
-  "comments": []
+  "comments": [
+    {
+      "author_id": "001",
+      "post_id": "001",
+      "publishedAt": "2060-10-18 12:39",
+      "content": "312312",
+      "id": 1
+    },
+    {
+      "author_id": "001",
+      "post_id": "001",
+      "publishedAt": "2046-05-05 05:15",
+      "content": "312312412412",
+      "id": 2
+    },
+    {
+      "author_id": "001",
+      "post_id": "001",
+      "publishedAt": "2034-11-06 04:55",
+      "content": "3123124124121241241",
+      "id": 3
+    },
+    {
+      "author_id": null,
+      "post_id": "001",
+      "publishedAt": "2045-06-13 21:02",
+      "content": "1",
+      "id": 4
+    },
+    {
+      "author_id": null,
+      "post_id": "001",
+      "publishedAt": "2043-07-13 20:01",
+      "content": "1",
+      "id": 5
+    },
+    {
+      "author_id": null,
+      "post_id": "001",
+      "publishedAt": "2064-05-14 10:21",
+      "content": "1k",
+      "id": 6
+    },
+    {
+      "author_id": "001",
+      "post_id": "001",
+      "publishedAt": "2053-11-13 23:19",
+      "content": "12",
+      "id": 7
+    },
+    {
+      "author_id": "001",
+      "post_id": "001",
+      "publishedAt": "2064-05-27 10:03",
+      "content": "1",
+      "id": 8
+    },
+    {
+      "author_id": "001",
+      "post_id": "001",
+      "publishedAt": "2050-08-06 04:21",
+      "content": "34643",
+      "id": 9
+    }
+  ],
+  "sessions": [
+    {
+      "hash": "0.95157886325867657717481051804497838020324707031250",
+      "user": {
+        "id": "001",
+        "login": "nekit",
+        "password": "123456",
+        "registeredAt": "2023-08-23",
+        "roleId": "777"
+      },
+      "id": 1
+    },
+    {
+      "hash": "0.32458745277151890284983437595656141638755798339844",
+      "user": {
+        "id": "kkvYHxa",
+        "login": "nekita",
+        "password": "nekita",
+        "registeredAt": "2064-02-26 08:08",
+        "roleId": 1
+      },
+      "id": 2
+    },
+    {
+      "hash": "0.50623227163937434269769255479332059621810913085938",
+      "user": {
+        "id": "001",
+        "login": "nekit",
+        "password": "123456",
+        "registeredAt": "2023-08-23",
+        "roleId": "777"
+      },
+      "id": 3
+    },
+    {
+      "hash": "0.33668334242318698201756888011004775762557983398438",
+      "user": {
+        "id": "001",
+        "login": "nekit",
+        "password": "123456",
+        "registeredAt": "2023-08-23",
+        "roleId": "777"
+      },
+      "id": 4
+    },
+    {
+      "hash": "0.53684696575629109460692234279122203588485717773438",
+      "user": {
+        "id": "001",
+        "login": "nekit",
+        "password": "123456",
+        "registeredAt": "2023-08-23",
+        "roleId": "777"
+      },
+      "id": 5
+    }
+  ]
 }

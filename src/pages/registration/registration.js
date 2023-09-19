@@ -35,6 +35,7 @@ const ErrorMessage = styled.div`
 	margin: 10px 0 0;
 	padding: 10px;
 	background-color: #f88a89;
+	width: 350px;
 `;
 
 const RegistationContainer = ({ className }) => {
@@ -80,7 +81,7 @@ const RegistationContainer = ({ className }) => {
 				return;
 			}
 
-			dispatch(setUser(response));
+			dispatch(setUser('userData', JSON.stringify(response)));
 		});
 	};
 
