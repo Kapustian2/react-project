@@ -1,6 +1,6 @@
 import { Routes, Route } from 'react-router-dom';
 import { styled } from 'styled-components';
-import { Header, Footer } from './components/index';
+import { Header, Footer, Modal } from './components/index';
 import { Authorization, Registration, Users, Post } from './pages';
 import { useLayoutEffect } from 'react';
 import { setUser } from './actions';
@@ -53,10 +53,13 @@ function App() {
 					<Route path="/users" element={<Users />} />
 					<Route path="/newpost" element={<div>Новая статья</div>} />
 					<Route path="/post/:id" element={<Post />} />
+					<Route path="/post/:id/edit" element={<Post />} />
+					<Route path="/post/:id/*" element={<div>Ошибка</div>} />
 					<Route path="*" element={<div>Ошибка</div>} />
 				</Routes>
 			</Page>
 			<Footer />
+			<Modal />
 		</AppColumn>
 	);
 }
