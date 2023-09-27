@@ -12,7 +12,6 @@ export const register = async (regLogin, regPassword) => {
 	}
 
 	const user = await addUser(regLogin, regPassword);
-	console.log(user);
 	return {
 		error: null,
 		response: {

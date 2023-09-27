@@ -1,1 +1,1 @@
-export const selectModalOnCancel = ({ app }) => app.modal.cancel;
+export const selectModalOnCancel = ({ app }) => app.modal.onCancel;
