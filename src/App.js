@@ -1,11 +1,10 @@
 import { Routes, Route } from 'react-router-dom';
 import { styled } from 'styled-components';
 import { Header, Footer, Modal } from './components/index';
-import { Authorization, Registration, Users, Post } from './pages';
+import { Authorization, Registration, Users, Post, Main } from './pages';
 import { useLayoutEffect } from 'react';
 import { setUser } from './actions';
 import { useDispatch } from 'react-redux';
-import { number } from 'yup';
 
 const AppColumn = styled.div`
 	display: flex;
@@ -44,10 +43,11 @@ function App() {
 	return (
 		<AppColumn>
 			<Header />
+
 			<Page>
 				<h2>------------</h2>
 				<Routes>
-					<Route path="/" element={<div>Главная страница</div>} />
+					<Route path="/" element={<Main />} />
 					<Route path="/login" element={<Authorization />} />
 					<Route path="/register" element={<Registration />} />
 					<Route path="/users" element={<Users />} />
